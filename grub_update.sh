@@ -15,12 +15,12 @@ echo "GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash new_string\"" >> /etc/default/gr
 echo "Updating GRUB..."
 update-grub
 
-# Countdown until reboot
-echo "Rebooting in 10 seconds..."
-for i in {10..1}; do
-    echo "$i..."
-    sleep 1
-done
+# # Countdown until reboot
+# echo "Rebooting in 10 seconds..."
+# for i in {10..1}; do
+#     echo "$i..."
+#     sleep 1
+# done
 
 # # Reboot system
 # echo "Rebooting now!"
