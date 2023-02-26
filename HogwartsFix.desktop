@@ -2,6 +2,6 @@
 [Desktop Entry]
 Name=Hogwarts SteamDeck Fix
 Comment=Updates the GRUB configuration and reboots the system
-Exec=curl https://raw.githubusercontent.com/pdx-rico/hogwarts-steamdeck-fix/main/grub_update.sh | bash -s --
+Exec=curl https://raw.githubusercontent.com/pdx-rico/hogwarts-steamdeck-fix/main/grub_update.sh | pkexec bash -s --
 Terminal=true
 Type=Application
