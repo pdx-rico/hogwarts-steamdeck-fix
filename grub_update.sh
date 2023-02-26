@@ -19,9 +19,6 @@ sed -i 's/^\(GRUB_CMDLINE_LINUX_DEFAULT=".*\)"/\1 clearcpuid=514"/' /etc/default
 
 # # Update GRUB
 echo "Updating GRUB..."
-for i in {2..1}; do
-    sleep 1
-done
 update-grub
 
 # Countdown until reboot

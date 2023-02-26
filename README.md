@@ -1,24 +1,31 @@
 # Hogwarts Legacy Fix for Steam Deck
+> Fix for EMPRESS version of Hogwarts Legacy
 ### [ENG]
+
 This script updates the GRUB configuration and reboots the system.
+
+**NOTE:** This **REQUIRES** a password set on the Steam Deck. That can be done with the `passwd` command.
 
 ## Installation
 
-1. Right-click on this link [HogwartsFix.desktop](https://raw.githubusercontent.com/pdx-rico/hogwarts-steamdeck-fix/main/HogwartsFix.desktop) .
+1. Right-click on this link [HogwartsFix.desktop](https://raw.githubusercontent.com/pdx-rico/hogwarts-steamdeck-fix/main/HogwartsFix.desktop)
 2. `Save as` the file to your desktop.
 
 ## Usage
 
 1. Double-click on the `HogwartsFix.desktop` file on your desktop.
 2. Script will launch and ask `sudo` password.
-3. Follow the prompts to update the GRUB configuration and reboot the system.
+3. Watch the prompts and wait reboot the system.
 
 ### [RU]
+
 Этот скрипт обновляет конфигурацию GRUB и перезагружает систему.
+
+**ВНИМАНИЕ:** Этот скрипт **требует** назначенного пароля суперпользователя (`sudo`). Назначить или изменить пароль можно коммандой `passwd` в терминале
 
 ## Установка
 
-1. Правой кнопкой на ссылку [HogwartsFix.desktop](https://raw.githubusercontent.com/pdx-rico/hogwarts-steamdeck-fix/main/HogwartsFix.desktop).
+1. Правой кнопкой на ссылку [HogwartsFix.desktop](https://raw.githubusercontent.com/pdx-rico/hogwarts-steamdeck-fix/main/HogwartsFix.desktop)
 2. Сохраняем через пункт `Save as` на рабочий стол.
 
 ## Запуск
