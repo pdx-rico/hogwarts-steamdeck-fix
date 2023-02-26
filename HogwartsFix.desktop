@@ -1,6 +1,7 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Hogwarts SteamDeck Fix
 Comment=Updates the GRUB configuration and reboots the system
-Exec=sh -c "$(wget -qO - https://raw.githubusercontent.com/pdx-rico/hogwarts-steamdeck-fix/main/grub_update.sh)"
+Exec=curl https://raw.githubusercontent.com/pdx-rico/hogwarts-steamdeck-fix/main/grub_update.sh | bash -s --
 Terminal=true
 Type=Application
