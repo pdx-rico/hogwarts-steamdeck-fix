@@ -1,33 +1,28 @@
 #!/bin/bash
 
-# Greeting
-echo "Welcome to the GRUB update script!"
-
-# # Backup GRUB configuration
-echo "Backing up GRUB configuration..."
-for i in {2..1}; do
+# Check if the new value is already present in GRUB_CMDLINE_LINUX_DEFAULT
+if grep -q "clearcpuid=514" /etc/default/grub; then
+  echo "The fix is already present in GRUB_CMDLINE_LINUX_DEFAULT"
+else
+  # Backup the original file
+  for i in {2..1}; do
     sleep 1
-done
-cp /etc/default/grub /etc/default/grub.bak
+  done
 
-# # Inserting a string into GRUB
-echo "Inserting string into GRUB..."
-for i in {2..1}; do
+  cp /etc/default/grub /etc/default/grub.bak
+  
+  # Add the new value to GRUB_CMDLINE_LINUX_DEFAULT
+  for i in {2..1}; do
     sleep 1
-done
-sed -i 's/^\(GRUB_CMDLINE_LINUX_DEFAULT=".*\)"/\1 clearcpuid=514"/' /etc/default/grub
+  done
 
-# # Update GRUB
-echo "Updating GRUB..."
-update-grub
-
-# Countdown until reboot
-echo "Rebooting in 5 seconds..."
-for i in {5..1}; do
-    echo "$i..."
-    sleep 1
-done
-
-# # Reboot system
-echo "Rebooting now!"
-shutdown now -r
+  sed -i 's/^\(GRUB_CMDLINE_LINUX_DEFAULT=".*\)"/\1 clearcpuid=514"/' /etc/default/grub
+  
+  # Update the GRUB configuration file
+  update-grub
+  
+  # Reboot after a countdown
+  echo "Rebooting in 10 seconds..."
+  sleep 5
+  shutdown now -r
+fi
