@@ -4,7 +4,8 @@
 
 This script updates the GRUB configuration and reboots the system.
 
-**NOTE:** This **REQUIRES** a password set on the Steam Deck. That can be done with the `passwd` command.
+**NOTE:** This **REQUIRES** a password set on the Steam Deck. That can be done with the `passwd` command. 
+Backup of your GRUB puts in `/etc/default/grub.bak`
 
 ## Installation
 
@@ -22,6 +23,7 @@ This script updates the GRUB configuration and reboots the system.
 Этот скрипт обновляет конфигурацию GRUB и перезагружает систему.
 
 **ВНИМАНИЕ:** Этот скрипт **требует** назначенного пароля суперпользователя (`sudo`). Назначить или изменить пароль можно коммандой `passwd` в терминале
+Резервная копия вашего GRUB помещается в `/etc/default/grub.bak`
 
 ## Установка
 
