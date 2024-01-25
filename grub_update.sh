@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Check if the new value is already present in GRUB_CMDLINE_LINUX_DEFAULT
+# If value is present exit without any errors
 if grep -q "clearcpuid=514" /etc/default/grub; then
   echo "The fix is already present in GRUB_CMDLINE_LINUX_DEFAULT"
-  sleep 3
+  echo 
+  exit 0
 else
   # Backup the original file
   echo "Backup grub..."
