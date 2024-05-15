@@ -26,6 +26,5 @@ else
     sleep 1
   done
 
-echo "Reboot!"
 shutdown now -r
 fi
